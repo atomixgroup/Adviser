@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#000"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/sound_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right"
+        android:layout_margin="14dp"
+        android:text="فایل صوتی"
+        android:textColor="#fff" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sound_title" />
+    <RelativeLayout
+        android:layout_below="@id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            app:tint="#fff"
+            android:id="@+id/button_forward"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="@dimen/standard_margin_x2"
+            android:layout_marginStart="@dimen/standard_margin_x2"
+            android:layout_toRightOf="@id/button_play"
+            android:layout_toEndOf="@id/button_play"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_fast_forward_black_48dp"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            app:tint="#fff"
+            android:id="@+id/button_rewind"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/button_play"
+            android:layout_toStartOf="@id/button_play"
+            android:layout_marginRight="@dimen/standard_margin_x2"
+            android:layout_marginEnd="@dimen/standard_margin_x2"
+            android:src="@drawable/ic_fast_rewind_black_48dp"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_music_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            tools:text="05:00"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_music_current_duration"
+            android:layout_width="wrap_content"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            tools:text="00:25"/>
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_play"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:elevation="2dp"
+            android:visibility="invisible"
+            android:padding="14dp"
+            android:src="@drawable/ic_play"
+            android:layout_centerInParent="true"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/download"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:elevation="2dp"
+            android:visibility="invisible"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_file_download"
+            android:layout_centerInParent="true"
+            />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/get_premium"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:elevation="2dp"
+            android:visibility="invisible"
+            android:padding="4dp"
+            app:tint="#fff"
+            app:srcCompat="@drawable/ic_local_atm"
+            android:layout_centerInParent="true"
+            />
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progress"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/button_rewind"
+
+            app:elevation="2dp"
+            app:indicatorName="BallScaleMultipleIndicator" />
+
+    </RelativeLayout>
+</RelativeLayout>

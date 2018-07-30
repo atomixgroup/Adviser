@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="ir.codetower.moshaver.Fragments.ContentFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/content_list"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buy_curse"
+        android:gravity="center"
+        android:text="خرید کل دوره با تخفیف 15 درصد"
+        android:textColor="#fff" />
+</LinearLayout>

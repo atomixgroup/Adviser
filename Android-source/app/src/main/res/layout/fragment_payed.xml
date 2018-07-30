@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ir.codetower.moshaver.Fragments.ContentFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/content_list"
+
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <ir.codetower.moshaver.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/noitem"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="در حال حاضر هیچ خریدی انجام نشده است"/>
+</LinearLayout>

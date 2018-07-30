@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2"
+    android:orientation="vertical"
+    tools:context="ir.codetower.moshaver.Activities.ContentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+
+            <ir.codetower.moshaver.CustomTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="فایل صوتی"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/premium_root"
+            android:background="@color/colorWarning"
+            android:orientation="vertical">
+
+            <ir.codetower.moshaver.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="وضعیت فعلی فایل : خریداری نشده"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+            <ir.codetower.moshaver.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:id="@+id/price"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="خریداری میکنم" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/download_root"
+            android:background="@color/colorPayed"
+            android:orientation="vertical">
+
+            <ir.codetower.moshaver.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="وضعیت فعلی فایل : خریداری شده ولی بارگزاری نشده"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="بارگزاری میکنم" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:progressDrawable="@drawable/green_progress"
+                android:progress="50"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/play_root"
+            android:background="@color/colorSuccess">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sound_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_margin="14dp"
+                android:text="فایل صوتی"
+                android:textColor="#fff" />
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sound_title" />
+            <RelativeLayout
+                android:layout_below="@id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    app:tint="#fff"
+                    android:id="@+id/button_forward"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="@dimen/standard_margin_x2"
+                    android:layout_marginStart="@dimen/standard_margin_x2"
+                    android:layout_toRightOf="@id/button_play"
+                    android:layout_toEndOf="@id/button_play"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_fast_forward_black_48dp"
+                    />
+                <android.support.v7.widget.AppCompatImageView
+                    app:tint="#fff"
+                    android:id="@+id/button_rewind"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/button_play"
+                    android:layout_toStartOf="@id/button_play"
+                    android:layout_marginRight="@dimen/standard_margin_x2"
+                    android:layout_marginEnd="@dimen/standard_margin_x2"
+                    android:src="@drawable/ic_fast_rewind_black_48dp"/>
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_music_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="05:00"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_music_current_duration"
+                    android:layout_width="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    tools:text="00:25"/>
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/button_play"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    app:elevation="2dp"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_play"
+                    android:layout_centerInParent="true"
+                    />
+
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progress"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/button_rewind"
+
+                    app:elevation="2dp"
+                    app:indicatorName="BallScaleMultipleIndicator" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/video_root"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_back"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_margin="14dp"
+                android:text="فایل ویدیویی"
+                android:textColor="#fff" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/video_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/image_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_back"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_margin="14dp"
+                android:text="فایل عکسی"
+                android:textColor="#fff" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_back">
+
+            <ir.codetower.moshaver.CustomTextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="20dp"
+                android:lineSpacingExtra="6dp"
+                android:lineSpacingMultiplier="2.5"
+                android:textColor="#222222"
+                tools:text="متن پیشفرض" />
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/favorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+
+                    android:layout_marginRight="5dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+
+                        android:gravity="center"
+                        android:text="جزو علاقیمندی ها باشد"
+                        android:textColor="@color/colorPrimary" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/favorite_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/ic_health"
+                        app:tint="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                >
+
+
+                <com.hedgehog.ratingbar.RatingBar
+                    android:id="@+id/ratingbar"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    hedgehog:clickable="true"
+                    hedgehog:starCount="5"
+                    hedgehog:starEmpty="@mipmap/ic_love_empty"
+                    hedgehog:starFill="@mipmap/ic_love_fill"
+                    hedgehog:starImageHeight="30dp"
+                    hedgehog:starImageWidth="30dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/avrage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingbar"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    tools:text="12" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/send_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/avrage"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="ارسال امتیاز"
+                    android:textColor="#fff"
+                    android:textSize="10sp"
+                    app:backgroundTint="@color/colorAccent" />
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

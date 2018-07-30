@@ -1,0 +1,80 @@
+.service-name{
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #0c4c4c;]
+border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+}
+.service{
+    border-color: #0c4c4c;
+    padding: 5px;
+
+    position: relative;
+    border: 1px solid #000000;
+    background: #efefef;
+    margin-bottom: 5px;
+    border-top-left-radius: 0px!important;
+    border-top-right-radius: 0px!important;
+    border-bottom-left-radius: 35px!important;
+    border-bottom-right-radius: 35px !important;
+    margin-top: -3px!important;
+}
+.h-line{
+    width: 190px;
+    border-top: 1px solid #929496;
+    margin: 0 auto;
+}
+.service p{
+    text-align: center;
+    margin: 0 0 10px;
+    font-family: IRANSans-normal ,tahoma;
+}
+.service-detail{
+    font-size: 12px;
+    color: grey;
+    font-weight: bold;
+}
+.service-desc{
+    font-size: 12px;
+    line-height: normal;
+    padding: 0 0 8px;
+    display: table;
+    margin: 0 auto;
+    color: grey;
+    font-weight: bold;
+}
+.service-price{
+    position: relative;
+    height: 40px;
+    display: block;
+    margin-top: 10px;
+}
+.measure{
+    font-size: 32px;
+    color: #0c4c4c;
+    font-weight: bold;
+    position: absolute;
+    right: 23%;
+    min-width: 90px;
+    text-align: left;
+}
+.unit{
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    top: -12px;
+    color: #0c4c4c;
+    right: 30px;
+}
+.service{
+    padding: 20px;
+}
+.service-container input{
+    margin: 0  auto !important;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
